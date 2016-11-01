@@ -18,6 +18,8 @@ function Z = AIS(WB, aA, aB, bA, bB, v0)
         PA = PA/(1+exp(-bA(i)));
     end
     
+    Z = log10(Z);
+    
     for k = 1:length(beta)
         pA = zeros(1,size(WA,2));
         hA = zeros(1,size(WA,2));
@@ -55,9 +57,8 @@ function Z = AIS(WB, aA, aB, bA, bB, v0)
         for j = 1:length(aB)
             Pk = Pk * (1+exp(beta(k)*(WB(:,j)'*v+aB(j))));
         end
-        Z = Z * Pk;
         if(k == 1)
-            Z = Z / PA;
+            Z = Z + log10(Pk/PA);
         else
             Pk_1 = exp((1-beta(k-1))*(bA*v));
             for j = 1:length(aA)
@@ -67,7 +68,7 @@ function Z = AIS(WB, aA, aB, bA, bB, v0)
             for j = 1:length(aB)
                 Pk_1 = Pk_1 * (1+exp(beta(k-1)*(WB(:,j)'*v+aB(j))));
             end
-            Z = Z / Pk_1;
+            Z = Z + log10(Pk/Pk_1);
         end
     end
 end
