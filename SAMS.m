@@ -3,7 +3,7 @@ function Zout = SAMS(W, a, bA, bB)
 %   此处显示详细说明
 %   a and b are row vectors
     N = 50000;
-    alpha = 0.85;
+    alpha = 0.35;
     beta_certain = 0.65;
     K = 100;
     Z = zeros(1,K);
