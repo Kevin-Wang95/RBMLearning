@@ -39,7 +39,7 @@ function Z = AIS(WB, aA, aB, bA, bB, v0)
         pA = zeros(1,size(WA,2));
         hA = zeros(1,size(WA,2));
         for j = 1:size(WA,2)
-            pA(j) = g((1-beta(k))*(WA(:,j)'*v+aA(j)));            
+            pA(j) = sigm((1-beta(k))*(WA(:,j)'*v+aA(j)));            
             u = rand(1,1);
             if pA(j) > u
                 hA(j) = 1;
@@ -48,7 +48,7 @@ function Z = AIS(WB, aA, aB, bA, bB, v0)
         pB = zeros(1,size(WB,2));
         hB = zeros(1,size(WB,2));
         for j = 1:size(WB,2)
-            pB(j) = g(beta(k)*(WB(:,j)'*v+aB(j)));            
+            pB(j) = sigm(beta(k)*(WB(:,j)'*v+aB(j)));            
             u = rand(1,1);
             if pB(j) > u
                 hB(j) = 1;
@@ -56,7 +56,7 @@ function Z = AIS(WB, aA, aB, bA, bB, v0)
         end
         pV = zeros(1,size(WB,1));
         for i = 1:length(v)
-            pV(i) = g((1-beta(k))*(WA(i,:)*hA'+bA(i))+beta(k)*(WB(i,:)*hB'+bB(i)));
+            pV(i) = sigm((1-beta(k))*(WA(i,:)*hA'+bA(i))+beta(k)*(WB(i,:)*hB'+bB(i)));
             u = rand(1,1);
             if pV(i) > u
                 v(i) = 1;
@@ -65,8 +65,4 @@ function Z = AIS(WB, aA, aB, bA, bB, v0)
             end
         end        
     end
-end
-
-function y = g(x)
-    y = 1/(1+exp(-x));
 end

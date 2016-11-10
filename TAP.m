@@ -32,7 +32,3 @@ function Z = TAP(W, a, b)
     T = -S - a*mv' - b*mh' - mv*W*mh' - 0.5*(mv-mv.^2)*W.^2*(mh-mh.^2)';
     Z = -T;
 end
-
-function s = sigm(x)
-    s = 1./(1+exp(-x));
-end
