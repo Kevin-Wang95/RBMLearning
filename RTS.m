@@ -1,4 +1,4 @@
-function Zout = RTS(W, a, bA, bB)
+function Zout = RTS(W, a, bA, bB, T)
 %RTS 此处显示有关此函数的摘要
 %   a and b are row vectors
     aA = a;aB = a;
@@ -12,7 +12,7 @@ function Zout = RTS(W, a, bA, bB)
     ZA = sum(log(1+exp(aA)));
     ZA = ZA + sum(log(1+exp(bA)));
 
-    while max(abs(1/K-c)) > 0.2/K
+    while max(abs(1/K-c)) > T/K
 %         beta = sort(rand(1,K));
 %         beta(1) = 0;beta(end) = 1;
         beta = linspace(0,1,K);
@@ -56,7 +56,7 @@ function Zout = RTS(W, a, bA, bB)
             
             c = c + Q/N;
         end
-%         max(abs(1/K-c))
+        max(abs(1/K-c))
         Z = Z.*c/c(1);
     end
     Zout = log(Z(end));
