@@ -9,8 +9,10 @@ function Z = TAP(W, a, b)
     i = 0;
     min_mh = inf;
     min_mv = inf;
-    while flag
-        if abs(norm(mh-mh_pre))>1.2*min_mh || abs(norm(mv-mv_pre))>1.2*min_mv || i <50000 
+    while i<100000
+        max(abs(mh-mh_pre))
+        max(abs(mv-mv_pre))
+        if max(abs(mh-mh_pre))>1e-1 || max(abs(mv-mv_pre))>1e-1 || i <50000 
             mh_pre = mh;
             mv_pre = mv;
             mh = sigm(b + mv*W - (mv-mv.^2)*W.^2.*(mh-0.5));
