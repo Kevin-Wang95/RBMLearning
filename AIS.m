@@ -25,19 +25,16 @@ function Z = AIS(WB, aA, aB, bA, bB, v0, K)
         Pk_1 = exp(Pk_1);
         Z = Z + log(Pk_1/Pk);
         
-        pA = zeros(1,size(WA,2));
         hA = zeros(1,size(WA,2));
         pA = sigm((1-beta(k))*(WA'*v+aA'));            
         u = rand(size(pA));
         hA(pA>u) = 1;
 
-        pB = zeros(1,size(WB,2));
         hB = zeros(1,size(WB,2));
         pB = sigm(beta(k)*(WB'*v+aB'));            
         u = rand(size(pB));
         hB(pB>u) = 1;
         
-        pV = zeros(1,size(WB,1));
         pV = sigm((1-beta(k))*(WA*hA'+bA')+beta(k)*(WB*hB'+bB'));
         u = rand(size(pV));
         v(pV<=u) = 0; v(pV>u) = 1;

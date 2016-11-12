@@ -10,7 +10,7 @@ parameter_bA_4_RTS = log((sum(testbatchdata,1)+5)/size(testbatchdata,1)) - ...
 load h10.mat
 Z_10_AIS = AIS(parameter_W, parameter_a, parameter_a, parameter_b, parameter_b, ...
     zeros(size(parameter_W,1),1), 100000)
-% Z_10_SAMS = SAMS(parameter_W, parameter_a,parameter_bA_4_RTS, parameter_b)
+Z_10_SAMS = SAMS(parameter_W, parameter_a, parameter_b)
 Z_10_TAP = TAP(parameter_W, parameter_b, parameter_a,1e-4)
 Z_10_RTS = RTS(parameter_W, parameter_a, parameter_bA_4_RTS, parameter_b)
 
