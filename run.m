@@ -1,4 +1,4 @@
-clear all;
+clear all; close all;
 load test.mat
 testbatchdata = permute(testbatchdata, [1,3,2]);
 testbatchdata = reshape(testbatchdata,size(testbatchdata,1) ...

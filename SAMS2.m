@@ -2,7 +2,7 @@ function Zout = SAMS2(W, a, b)
 %SAMS 此处显示有关此函数的摘要
 %   此处显示详细说明
 %   a and b are row vectors
-    N0 = 10000;
+    N0 = 20000;
     N1 = 1000;
     alpha = 0.3;
     beta_certain = 0.75;
@@ -111,10 +111,10 @@ function Zout = SAMS2(W, a, b)
                 end
             end
         end
-        if n < floor(alpha*N)
+        if n < floor(alpha*N0)
             t = min(1/K, n^(-beta_certain));
         else
-            t = min(1/K, (n - floor(alpha*N) + floor(alpha*N)^beta_certain)^-1);
+            t = min(1/K, (n - floor(alpha*N0) + floor(alpha*N0)^beta_certain)^-1);
         end
 %         t = n^-1;
         Z = Z + t*Q/(1/K);
