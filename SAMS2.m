@@ -1,12 +1,11 @@
-function Zout = SAMS2(W, a, b)
+function Zout = SAMS2(W, a, b, T)
 %SAMS 此处显示有关此函数的摘要
 %   此处显示详细说明
 %   a and b are row vectors
-    N0 = 20000;
+    N0 = 10000;
     N1 = 1000;
-    alpha = 0.3;
     beta_certain = 0.75;
-    K = 100;
+    K = 1000;
     Z = zeros(1,K);
     WA = zeros(size(W));
     WB = W;
@@ -18,7 +17,7 @@ function Zout = SAMS2(W, a, b)
     beta(1) = 0;beta(end) = 1;
     beta_s = beta(randi([1,length(beta)]));
     v = zeros(size(W,1),1); %   v is a col vector
-    for ii = 1:8
+    for ii = 1:3
         for n = 1:N1
     %         beta = sort(rand(1,K));
     %         beta(1) = 0;beta(end) = 1;
@@ -70,7 +69,8 @@ function Zout = SAMS2(W, a, b)
             Z = Z - Z(1);
         end
     end
-    for n = 1:N0
+    pre_Z = inf;
+    while abs(pre_Z-Z(end))> T
 %         beta = sort(rand(1,K));
 %         beta(1) = 0;beta(end) = 1;
 %         beta = linspace(0,1,K);
@@ -111,14 +111,16 @@ function Zout = SAMS2(W, a, b)
                 end
             end
         end
-        if n < floor(alpha*N0)
+        if n < N0
             t = min(1/K, n^(-beta_certain));
         else
-            t = min(1/K, (n - floor(alpha*N0) + floor(alpha*N0)^beta_certain)^-1);
+            t = min(1/K, (n - N0 + N0^beta_certain)^-1);
         end
 %         t = n^-1;
+        pre_Z = Z(end);
         Z = Z + t*Q/(1/K);
         Z = Z - Z(1);
+        abs(pre_Z-Z(end))
     end
     Zout = Z(end);
 

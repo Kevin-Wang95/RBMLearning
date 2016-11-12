@@ -2,16 +2,9 @@ function Zout = SAMS(W, a, b)
 %SAMS 此处显示有关此函数的摘要
 %   此处显示详细说明
 %   a and b are row vectors
-<<<<<<< HEAD
-    N = 1000;
-    alpha = 0.3;
+    N = 30000;
+    alpha = 0.35;
     beta_certain = 0.75;
-=======
-    bA = bB;
-    N = 50000;
-    alpha = 0.5;
-    beta_certain = 0.65;
->>>>>>> dba3ba7130bf6240481ddd311fb65ffea33141b3
     K = 100;
     Z = zeros(1,K);
     WA = zeros(size(W));
@@ -45,37 +38,32 @@ function Zout = SAMS(W, a, b)
 
         Q = zeros(1,K);
         for k = 1:K
-            Q(k) = (1-beta(k))*(bA*v);
-            Q(k) = Q(k) + sum(log(1+exp((1-beta(k))*(WA'*v+aA'))));
-            Q(k) = Q(k) + beta(k)*(bB*v);
+%             Q(k) = (1-beta(k))*(bA*v);
+%             Q(k) = Q(k) + sum(log(1+exp((1-beta(k))*(WA'*v+aA'))));
+            Q(k) = sum(log(1+exp((1-beta(k))*(WA'*v+aA'))));
+            Q(k) = Q(k) + bB*v;
             Q(k) = Q(k) + sum(log(1+exp(beta(k)*(WB'*v+aB'))));
-            Q(k) = exp(Q(k))/exp(Z(k))/exp(ZA)^(1-beta(k));
         end
+        Q = exp(Q-mean(Q))./exp(Z);
         Q = Q./sum(Q);
-        s = find(beta==beta_s);
-        if s == 1
-            beta_s = beta(2);
-        else
-            if s == length(beta)
-                beta_s = beta(end-1);
-            else
-                if Q(s-1)< Q(s+1)
-                    beta_s = beta(s-1);
-                else
-                    beta_s = beta(s+1);
-                end
-            end
+        u = rand(1,1);
+        s = 1;
+        while u > 0
+            u = u - Q(s);
+            s = s + 1; 
         end
+        beta_s = beta(s-1);
+            
         if n < floor(alpha*N)
-            t = min(1/K, n^(-beta_certain));
+            t = min(1/K,n^(-beta_certain));
         else
-            t = min(1/K, (n - floor(alpha*N) + floor(alpha*N)^beta_certain)^-1);
+            t = min(1/K, (n - floor(alpha*N) + floor(alpha*N)^beta_certain)^(-1));
         end
 %         t = n^-1;
         Z = Z + t*Q/(1/K);
         Z = Z - Z(1);
     end
-    Zout = Z(end);
+    Zout = Z(end) + ZA;
 
 end
 

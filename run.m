@@ -10,29 +10,29 @@ parameter_bA_4_RTS = log(f) - log(1-f);
 load h10.mat
 Z_10_AIS = AIS(parameter_W, parameter_a, parameter_a, parameter_b, parameter_b, ...
     zeros(size(parameter_W,1),1), 100000)
-Z_10_SAMS = SAMS(parameter_W, parameter_a, parameter_b)
-Z_10_TAP = TAP(parameter_W, parameter_b, parameter_a,1e-4)
-Z_10_RTS = RTS(parameter_W, parameter_a, parameter_bA_4_RTS, parameter_b, 0.25)
+% Z_10_SAMS = SAMS2(parameter_W, parameter_a, parameter_b, 1e-4)
+% Z_10_TAP = TAP(parameter_W, parameter_b, parameter_a,1e-4)
+% Z_10_RTS = RTS(parameter_W, parameter_a, parameter_bA_4_RTS, parameter_b, 0.25)
 
 load h20.mat
 Z_20_AIS = AIS(parameter_W, parameter_a, parameter_a, parameter_b, parameter_b, ...
-    zeros(size(parameter_W,1),1), 600000)
-Z_20_SAMS = SAMS(parameter_W, parameter_b, parameter_a)
-Z_20_TAP = TAP(parameter_W, parameter_b, parameter_a)
-Z_20_RTS = RTS(parameter_W, parameter_a, parameter_b, 0.3)
+    zeros(size(parameter_W,1),1), 400000)
+% Z_20_SAMS = SAMS(parameter_W, parameter_b, parameter_a)
+% Z_20_TAP = TAP(parameter_W, parameter_b, parameter_a)
+% Z_20_RTS = RTS(parameter_W, parameter_a, parameter_b, 0.3)
 
 load h100.mat
 Z_100_AIS = AIS(parameter_W, parameter_a, parameter_a, parameter_b, parameter_b, ...
-    zeros(size(parameter_W,1),1),1000000)
-Z_100_SAMS = SAMS(parameter_W, parameter_b, parameter_a)
-Z_100_TAP = TAP(parameter_W, parameter_b, parameter_a)
-Z_100_RTS = RTS(parameter_W, parameter_a, parameter_b, 0.4)
+    zeros(size(parameter_W,1),1),500000)
+% Z_100_SAMS = SAMS(parameter_W, parameter_b, parameter_a)
+% Z_100_TAP = TAP(parameter_W, parameter_b, parameter_a)
+% Z_100_RTS = RTS(parameter_W, parameter_a, parameter_b, 0.4)
 
 load h500.mat
 Z_500_AIS = AIS(parameter_W, parameter_a, parameter_a, parameter_b, parameter_b, ...
-    zeros(size(parameter_W,1),1))
-Z_500_SAMS = SAMS(parameter_W, parameter_b, parameter_a)
-Z_500_TAP = TAP(parameter_W, parameter_b, parameter_a)
-Z_500_RTS = RTS(parameter_W, parameter_a, parameter_b, 0.5)
+    zeros(size(parameter_W,1),1),1000000)
+% Z_500_SAMS = SAMS(parameter_W, parameter_b, parameter_a)
+% Z_500_TAP = TAP(parameter_W, parameter_b, parameter_a)
+% Z_500_RTS = RTS(parameter_W, parameter_a, parameter_b, 0.5)
 
 
