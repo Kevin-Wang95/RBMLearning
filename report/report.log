@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99996 (MiKTeX 2.9) (preloaded format=xelatex 2016.11.14)  14 NOV 2016 20:04
+This is XeTeX, Version 3.14159265-2.6-0.99996 (MiKTeX 2.9) (preloaded format=xelatex 2016.11.14)  14 NOV 2016 20:57
 entering extended mode
 **./report.tex
 (report.tex
@@ -1622,8 +1622,23 @@ LaTeX Font Info:    Try loading font information for U+rsfs on input line 45.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\jknappen\ursfs.fd"
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-File: 1.jpg Graphic file (type QTm)
 
+LaTeX Warning: Citation `salakhutdinov2009learning' on page 1 undefined on inpu
+t line 47.
+
+
+LaTeX Warning: Citation `carlson2016partition' on page 1 undefined on input lin
+e 47.
+
+
+LaTeX Warning: Citation `tan2015optimally' on page 1 undefined on input line 47
+.
+
+
+LaTeX Warning: Citation `gabrie2015training' on page 1 undefined on input line 
+47.
+
+File: 1.jpg Graphic file (type QTm)
 <use  "1.jpg" >
 Overfull \hbox (6.0pt too wide) in paragraph at lines 53--54
  [][] 
@@ -1640,21 +1655,33 @@ Overfull \hbox (6.0pt too wide) in paragraph at lines 108--109
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
+LaTeX Warning: Citation `salakhutdinov2009learning' on page 2 undefined on inpu
+t line 132.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\@ifnextchar' on input line 132.
 
 
+LaTeX Warning: Citation `gabrie2015training' on page 2 undefined on input line 
+164.
+
+
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\@ifnextchar' on input line 164.
 
 [2]
+
+LaTeX Warning: Citation `gabrie2015training' on page 3 undefined on input line 
+191.
+
+
 Overfull \hbox (1.63358pt too wide) in paragraph at lines 199--199
 [] 
  []
+
+
+Underfull \vbox (badness 1389) has occurred while \output is active []
 
 
 Overfull \hbox (36.89021pt too wide) in paragraph at lines 211--211
@@ -1662,88 +1689,103 @@ Overfull \hbox (36.89021pt too wide) in paragraph at lines 211--211
  []
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 216.
+LaTeX Warning: Citation `carlson2016partition' on page 3 undefined on input lin
+e 216.
+
+
+LaTeX Warning: Citation `tan2015optimally' on page 3 undefined on input line 21
+6.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\@ifnextchar' on input line 216.
 
-[3] [4]
-Underfull \hbox (badness 2351) in paragraph at lines 327--338
-[]\EU1/FandolSong-Regular(0)/m/n/10 再 分 析 程 序 的 准 确 性，|  将 \EU1/lmr/m/n/10 AIS 
-\EU1/FandolSong-Regular(0)/m/n/10 函 数 循
- []
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@ifnextchar' on input line 216.
+
+[3]
+
+LaTeX Warning: Citation `carlson2016partition' on page 4 undefined on input lin
+e 234.
 
 
-Underfull \hbox (badness 1527) in paragraph at lines 327--338
-\EU1/FandolSong-Regular(0)/m/n/10 环 \EU1/lmr/m/n/10 20 \EU1/FandolSong-Regular(
-0)/m/n/10 次，|  计 算 归 一 化 常 数 的 方 差 值，|  所
- []
+LaTeX Warning: Citation `salakhutdinov2009learning' on page 4 undefined on inpu
+t line 240.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 344--355
-[]\EU1/FandolSong-Regular(0)/m/n/10 本 文 实 现 了 \EU1/lmr/m/n/10 TAP \EU1/FandolSo
-ng-Regular(0)/m/n/10 的 二 阶 近 似 算
- []
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 344--355
-\EU1/FandolSong-Regular(0)/m/n/10 法 \EU1/lmr/m/n/10 TAP2 \EU1/FandolSong-Regula
-r(0)/m/n/10 与 三 阶 近 似 算 法 \EU1/lmr/m/n/10 TAP3\EU1/FandolSong-Regular(0)/m/n/10
- 。|  两
- []
+LaTeX Warning: Citation `tan2015optimally' on page 4 undefined on input line 26
+7.
 
 
-Underfull \hbox (badness 6032) in paragraph at lines 344--355
-\EU1/FandolSong-Regular(0)/m/n/10 个 算 法 的 运 行 性 能 结 果 如 下 表 所 示：|
- []
+LaTeX Warning: Citation `salakhutdinov2009learning' on page 4 undefined on inpu
+t line 267.
 
-
-Overfull \hbox (1.77032pt too wide) in paragraph at lines 344--355
-[] 
+[4] [5]
+Overfull \hbox (1.77032pt too wide) in paragraph at lines 347--357
+ [] 
  []
 
 File: 4.jpg Graphic file (type QTm)
 <use  "4.jpg" >
-Overfull \hbox (6.0pt too wide) in paragraph at lines 358--359
+Overfull \hbox (6.0pt too wide) in paragraph at lines 360--361
 [][] 
  []
 
 File: 4.jpg Graphic file (type QTm)
 <use  "4.jpg" >
-Overfull \hbox (6.0pt too wide) in paragraph at lines 363--364
+Overfull \hbox (6.0pt too wide) in paragraph at lines 365--366
 [][] 
  []
 
-[5]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: Citation `salakhutdinov2009learning' on page 6 undefined on inpu
+t line 371.
+
 File: 6.jpg Graphic file (type QTm)
- <use  "6.jpg" >
-Overfull \hbox (6.0pt too wide) in paragraph at lines 373--374
+<use  "6.jpg" >
+Overfull \hbox (6.0pt too wide) in paragraph at lines 375--376
 [][] 
  []
 
+[6] (report.bbl
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+! LaTeX Error: Something's wrong--perhaps a missing \item.
 
- [6]
-(report.bbl
-Missing character: There is no ￼ in font [lmroman8-regular]:mapping=tex-text!
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.24 \end{thebibliography}
+                          
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 428.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 430.
  [7]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 428.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 430.
  (report.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 428.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 428.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 430.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 430.
+
+
+LaTeX Warning: There were undefined references.
+
  ) 
 Here is how much of TeX's memory you used:
- 30077 strings out of 428408
- 547013 string characters out of 3159513
- 615733 words of memory out of 3000000
- 33176 multiletter control sequences out of 15000+200000
+ 30076 strings out of 428408
+ 547002 string characters out of 3159513
+ 618566 words of memory out of 3000000
+ 33175 multiletter control sequences out of 15000+200000
  31133 words of font info for 135 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
- 44i,13n,70p,10436b,414s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 44i,13n,70p,10436b,387s stack positions out of 5000i,500n,10000p,200000b,50000s
 
 Output written on report.pdf (7 pages).
