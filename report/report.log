@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99996 (MiKTeX 2.9) (preloaded format=xelatex 2016.11.14)  14 NOV 2016 20:57
+This is XeTeX, Version 3.14159265-2.6-0.99996 (MiKTeX 2.9) (preloaded format=xelatex 2016.11.14)  14 NOV 2016 21:06
 entering extended mode
 **./report.tex
 (report.tex
@@ -1622,23 +1622,8 @@ LaTeX Font Info:    Try loading font information for U+rsfs on input line 45.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\jknappen\ursfs.fd"
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-
-LaTeX Warning: Citation `salakhutdinov2009learning' on page 1 undefined on inpu
-t line 47.
-
-
-LaTeX Warning: Citation `carlson2016partition' on page 1 undefined on input lin
-e 47.
-
-
-LaTeX Warning: Citation `tan2015optimally' on page 1 undefined on input line 47
-.
-
-
-LaTeX Warning: Citation `gabrie2015training' on page 1 undefined on input line 
-47.
-
 File: 1.jpg Graphic file (type QTm)
+
 <use  "1.jpg" >
 Overfull \hbox (6.0pt too wide) in paragraph at lines 53--54
  [][] 
@@ -1655,27 +1640,14 @@ Overfull \hbox (6.0pt too wide) in paragraph at lines 108--109
  []
 
 
-LaTeX Warning: Citation `salakhutdinov2009learning' on page 2 undefined on inpu
-t line 132.
-
-
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\@ifnextchar' on input line 132.
-
-
-LaTeX Warning: Citation `gabrie2015training' on page 2 undefined on input line 
-164.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\@ifnextchar' on input line 164.
 
 [2]
-
-LaTeX Warning: Citation `gabrie2015training' on page 3 undefined on input line 
-191.
-
-
 Overfull \hbox (1.63358pt too wide) in paragraph at lines 199--199
 [] 
  []
@@ -1689,14 +1661,6 @@ Overfull \hbox (36.89021pt too wide) in paragraph at lines 211--211
  []
 
 
-LaTeX Warning: Citation `carlson2016partition' on page 3 undefined on input lin
-e 216.
-
-
-LaTeX Warning: Citation `tan2015optimally' on page 3 undefined on input line 21
-6.
-
-
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\@ifnextchar' on input line 216.
 
@@ -1706,23 +1670,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 [3]
 
-LaTeX Warning: Citation `carlson2016partition' on page 4 undefined on input lin
-e 234.
-
-
-LaTeX Warning: Citation `salakhutdinov2009learning' on page 4 undefined on inpu
-t line 240.
-
-
 LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: Citation `tan2015optimally' on page 4 undefined on input line 26
-7.
-
-
-LaTeX Warning: Citation `salakhutdinov2009learning' on page 4 undefined on inpu
-t line 267.
 
 [4] [5]
 Overfull \hbox (1.77032pt too wide) in paragraph at lines 347--357
@@ -1744,10 +1692,6 @@ Overfull \hbox (6.0pt too wide) in paragraph at lines 365--366
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-LaTeX Warning: Citation `salakhutdinov2009learning' on page 6 undefined on inpu
-t line 371.
-
 File: 6.jpg Graphic file (type QTm)
 <use  "6.jpg" >
 Overfull \hbox (6.0pt too wide) in paragraph at lines 375--376
@@ -1755,18 +1699,7 @@ Overfull \hbox (6.0pt too wide) in paragraph at lines 375--376
  []
 
 [6] (report.bbl
-
-! LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 \end{thebibliography}
-                          
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
+Missing character: There is no ￼ in font [lmroman8-regular]:mapping=tex-text!
 )
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 430.
  [7]
@@ -1774,16 +1707,12 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 430.
  (report.aux)
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 430.
 Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 430.
-
-
-LaTeX Warning: There were undefined references.
-
  ) 
 Here is how much of TeX's memory you used:
- 30076 strings out of 428408
- 547002 string characters out of 3159513
- 618566 words of memory out of 3000000
- 33175 multiletter control sequences out of 15000+200000
+ 30077 strings out of 428408
+ 547013 string characters out of 3159513
+ 618733 words of memory out of 3000000
+ 33176 multiletter control sequences out of 15000+200000
  31133 words of font info for 135 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
  44i,13n,70p,10436b,387s stack positions out of 5000i,500n,10000p,200000b,50000s

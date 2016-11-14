@@ -1,13 +1,9 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: report.aux
 The style file: IEEEtran.bst
-I found no \bibdata command---while reading file report.aux
-Warning--I didn't find a database entry for "salakhutdinov2009learning"
-Warning--I didn't find a database entry for "carlson2016partition"
-Warning--I didn't find a database entry for "tan2015optimally"
-Warning--I didn't find a database entry for "gabrie2015training"
+Database file #1: IEEEabrv.bib
+Database file #2: bibfile.bib
 -- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
 
 Done.
-(There was 1 error message)
