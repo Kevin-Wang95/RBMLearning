@@ -11,8 +11,8 @@ function Z = TAP2(W, a, b, Tlimit)
     while flag
         d = abs(T-T_pre);
         if d >Tlimit
-            mh = sigm(b + mv*W - (mv-mv.^2)*W.^2.*(mh-0.5));
-            mv = sigm(a + (W*mh')' - (W.^2*(mh-mh.^2)'.*(mv-0.5)')');
+            mh = logsig(b + mv*W - (mv-mv.^2)*W.^2.*(mh-0.5));
+            mv = logsig(a + (W*mh')' - (W.^2*(mh-mh.^2)'.*(mv-0.5)')');
                 T_pre = T;
                 S = - (mh*log(mh') + (1-mh)*log((1-mh)') + mv*log(mv') + (1-mv)*log((1-mv)')); 
                 T = -S - a*mv' - b*mh' - mv*W*mh' - 0.5*(mv-mv.^2)*W.^2*(mh-mh.^2)';

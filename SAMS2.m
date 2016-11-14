@@ -90,12 +90,13 @@ function Zout = SAMS2(W, a, b, T)
 
         Q = zeros(1,K);
         for k = 1:K
-            Q(k) = (1-beta(k))*(bA*v);
-            Q(k) = Q(k) + sum(log(1+exp((1-beta(k))*(WA'*v+aA'))));
-            Q(k) = Q(k) + beta(k)*(bB*v);
+%             Q(k) = (1-beta(k))*(bA*v);
+%             Q(k) = Q(k) + sum(log(1+exp((1-beta(k))*(WA'*v+aA'))));
+            Q(k) = sum(log(1+exp((1-beta(k))*(WA'*v+aA'))));
+            Q(k) = Q(k) + bB*v;
             Q(k) = Q(k) + sum(log(1+exp(beta(k)*(WB'*v+aB'))));
-            Q(k) = exp(Q(k))/exp(Z(k))/exp(ZA)^(1-beta(k));
         end
+        Q = exp(Q-mean(Q))./exp(Z);
         Q = Q./sum(Q);
         s = find(beta==beta_s);
         if s == 1
