@@ -1,6 +1,7 @@
 function Z = TAP2(W, a, b, Tlimit)
 %TAP 此处显示有关此函数的摘要
 %   a and b are row vectors
+%     figure;
     mh = rand(1,size(W,2));
     mv = rand(1,size(W,1));
     flag = true;
@@ -9,7 +10,7 @@ function Z = TAP2(W, a, b, Tlimit)
     T_pre = 0;
     i = 1;
     while flag
-        d = abs(T-T_pre);
+        d = abs(T-T_pre)
         if d >Tlimit
             mh = logsig(b + mv*W - (mv-mv.^2)*W.^2.*(mh-0.5));
             mv = logsig(a + (W*mh')' - (W.^2*(mh-mh.^2)'.*(mv-0.5)')');
@@ -26,6 +27,7 @@ function Z = TAP2(W, a, b, Tlimit)
         else
             flag = false;
         end
+%         scatter(i,d);hold on;
         i = i + 1;
     end
    

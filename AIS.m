@@ -17,13 +17,11 @@ function Z = AIS(WB, aA, aB, bA, bB, v0, K)
         Pk = Pk + sum(log(1+exp((1-beta(k))*(WA'*v+aA'))));
         Pk = Pk + (beta(k)*(bB*v));
         Pk = Pk + sum(log(1+exp(beta(k)*(WB'*v+aB'))));
-        Pk = exp(Pk);
         Pk_1 = (1-beta(k+1))*(bA*v);
         Pk_1 = Pk_1 + sum(log(1+exp((1-beta(k+1))*(WA'*v+aA'))));
         Pk_1 = Pk_1 + (beta(k+1)*(bB*v));
         Pk_1 = Pk_1 + sum(log(1+exp(beta(k+1)*(WB'*v+aB'))));
-        Pk_1 = exp(Pk_1);
-        Z = Z + log(Pk_1/Pk);
+        Z = Z + Pk_1-Pk;
         
         hA = zeros(1,size(WA,2));
         pA = logsig((1-beta(k))*(WA'*v+aA'));            

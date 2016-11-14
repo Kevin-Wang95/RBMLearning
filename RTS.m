@@ -12,8 +12,9 @@ function Zout = RTS(W, a, bA, bB, T)
     ZA = sum(log(1+exp(aA)));
     ZA = ZA + sum(log(1+exp(bA)));
     beta = linspace(0,1,K);
-
-    while max(abs(1/K-c)) > T/K
+%     figure;
+    i = 1;
+    while max(abs(1/K-c)) >= T/K | i==1
 %         beta = sort(rand(1,K));
 %         beta(1) = 0;beta(end) = 1;
         beta_s = beta(randi([1,length(beta)]));
@@ -54,6 +55,8 @@ function Zout = RTS(W, a, bA, bB, T)
             c = c + Q/N;
         end
         max(abs(1/K-c))
+%         scatter(i,max(abs(1/K-c))); hold on;
+        i = i+1;
         Z = Z.*c/c(1);
     end
     Zout = log(Z(end));

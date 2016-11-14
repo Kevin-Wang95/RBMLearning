@@ -1,6 +1,7 @@
 function Z = TAP3(W, a, b, Tlimit)
 %TAP 此处显示有关此函数的摘要
 %   a and b are row vectors
+%     figure;
     mh = rand(1,size(W,2));
     mv = rand(1,size(W,1));
     flag = true;
@@ -23,12 +24,10 @@ function Z = TAP3(W, a, b, Tlimit)
                     flag = false;
                     T = T_pre;
                 end
-                if d == abs(T-T_pre) 
-                    flag = false;
-                end
         else
             flag = false;
         end
+%         scatter(i,d);hold on;
         i = i + 1;
     end
    
